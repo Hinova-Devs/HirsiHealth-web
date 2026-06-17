@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  
+  --color-brand-50: oklch(0.97 0.015 220);
+  --color-brand-100: oklch(0.92 0.04 220);
+  --color-brand-500: oklch(0.6 0.18 220);
+  --color-brand-600: oklch(0.5 0.18 220);
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom CSS utilities for premium UI feel */
+@utility glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+@utility glass-panel-hover {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 30px rgba(13, 148, 136, 0.15);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
+}
+
+@utility border-glow {
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.3);
+}
+
+/* Base custom styles */
+body {
+  background: radial-gradient(circle at 50% 0%, #0d1e2d 0%, #020617 70%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(2, 6, 23, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 184, 166, 0.4);
+}
